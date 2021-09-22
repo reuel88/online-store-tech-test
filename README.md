@@ -10,7 +10,7 @@ The objective of this test is to gauge your skills around React (Next.js), API u
 
 ## Instructions
 
-We need you to use the below dependencies and to build a server-side rendered online store using either the [Figma](https://www.figma.com/file/5oqdRArPHbN33QJjFy1kiG/tech-test-store?node-id=0%3A1) OR [PNG](https://github.com/marcin-piekarski/online-store-tech-test/blob/main/images/online-store-tect-test-design.png) design as a reference.
+We need you to use the below dependencies to build a server-side rendered online store using either the [Figma](https://www.figma.com/file/5oqdRArPHbN33QJjFy1kiG/tech-test-store?node-id=0%3A1) OR [PNG](https://github.com/marcin-piekarski/online-store-tech-test/blob/main/images/online-store-tect-test-design.png) design as a reference.
 
 ## Dependencies
 - [Figma](https://www.figma.com/file/5oqdRArPHbN33QJjFy1kiG/tech-test-store?node-id=0%3A1) / [PNG](https://github.com/marcin-piekarski/online-store-tech-test/blob/main/images/online-store-tect-test-design.png) - A design of an online stores category page with a cart pop over
@@ -25,6 +25,13 @@ We need you to use the below dependencies and to build a server-side rendered on
 2. Category page that lists products fetched from the [Fake Store API](https://fakestoreapi.com/)
 3. Output that's server side rendered
 4. Simple cart functionality (eg. add, remove, alert on checkout)
+
+## What we're leaving up to you...
+
+- It's up to you on how simple/complex you'd like to make the project
+- Use whatever additional dependencies that you want (ie. styling, fetch, etc, etc)
+- Use whatever project structure that your comfortable with
+- As a stretch goal, it'd be fantastic to see some form of testing and/or typescript usage
 
 ## Getting Started
 
