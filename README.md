@@ -29,9 +29,9 @@ We need you to use the below dependencies to build a server-side rendered online
 ## What we're leaving up to you...
 
 - It's up to you on how simple/complex you'd like to make the project
-- Use whatever additional dependencies that you want (ie. styling, fetch, etc, etc)
-- Use whatever project structure that your comfortable with
-- As a stretch goal, it'd be fantastic to see some form of testing and/or typescript usage
+- Add whatever additional dependencies that you'd like (ie. styling, fetch, etc, etc)
+- Use whatever project structure your comfortable with
+- As a stretch goal, it'd be fantastic to see some form of testing
 
 ## Getting Started
 
