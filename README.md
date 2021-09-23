@@ -30,7 +30,7 @@ We need you to use the below dependencies to build a server-side rendered online
 
 - It's up to you on how simple/complex you'd like to make the project
 - Add whatever additional dependencies that you'd like (ie. styling, fetch, etc, etc)
-- Use whatever project structure your comfortable with
+- Use whatever project structure you're comfortable with
 - As a stretch goal, it'd be fantastic to see some form of testing
 
 ## Getting Started
