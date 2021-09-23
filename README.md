@@ -2,7 +2,7 @@
 
 ![Online Store Tech Test](https://raw.githubusercontent.com/marcin-piekarski/online-store-tech-test/main/images/online-store-tech-test-header.png)
 
-This repository contains a *simple* online store design (category page and cart pop over) as well as instructions for this test.
+This repository contains a _simple_ online store design (category page and cart pop over) as well as instructions for this test.
 
 ## Objective
 
@@ -13,6 +13,7 @@ The objective of this test is to gauge your skills around React (Next.js), API u
 We need you to use the below dependencies to build a server-side rendered online store using either the [Figma](https://www.figma.com/file/5oqdRArPHbN33QJjFy1kiG/tech-test-store?node-id=0%3A1) OR [PNG](https://github.com/marcin-piekarski/online-store-tech-test/blob/main/images/online-store-tect-test-design.png) design as a reference.
 
 ## Dependencies
+
 - [Figma](https://www.figma.com/file/5oqdRArPHbN33QJjFy1kiG/tech-test-store?node-id=0%3A1) / [PNG](https://github.com/marcin-piekarski/online-store-tech-test/blob/main/images/online-store-tect-test-design.png) - A design of an online stores category page with a cart pop over
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Next.js](https://nextjs.org/) by Vercel - The React Framework
@@ -35,7 +36,7 @@ We need you to use the below dependencies to build a server-side rendered online
 
 ## Getting Started
 
-- Fork this Git Repository
-- Setup your project using the above dependencies
-- Use the design as a guide on what to build
-
+1. Fork this Git Repository
+2. Setup your project using the above dependencies
+3. Build your project using the provided design as a guide
+4. Share your Git Repository when your ready
