@@ -22,10 +22,10 @@ We need you to use the below dependencies to build a server-side rendered online
 
 ## What we're looking for...
 
-1. Forked Git repository with a setup Next.js project
-2. Category page that lists products fetched from the [Fake Store API](https://fakestoreapi.com/)
-3. Output that's server side rendered
-4. Simple cart functionality (eg. add, remove, alert on checkout)
+1. Fork of this Git repository containing a project which includes the above dependencies
+2. Category page that displays products fetched from the [Fake Store API](https://fakestoreapi.com/)
+3. Product cards that among other things include an add to cart button
+4. Dismissable cart pop over which lists products, shows the order total, allows removal of products and displays a console.log or alert on checkout
 
 ## What we're leaving up to you...
 
