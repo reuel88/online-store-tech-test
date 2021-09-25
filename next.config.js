@@ -5,4 +5,7 @@ module.exports = {
     locales: ["en-AU", "zh"],
     defaultLocale: "en-AU"
   },
+  images: {
+    domains: ['fakestoreapi.com'],
+  },
 }
