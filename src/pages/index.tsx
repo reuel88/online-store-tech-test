@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import { LightningBoltIcon } from '@heroicons/react/solid'
-import { ShoppingBagIcon } from '@heroicons/react/outline'
 import { useEffect, useState } from "react";
-import Products, { ProductInterface } from "../modules/Products"
+import Products from "../modules/Products"
+import { ProductInterface } from "../utils/format";
+import CartButton from "../modules/CartButton";
+
 
 const Home: NextPage = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -32,18 +34,15 @@ const Home: NextPage = () => {
     return (
         <>
             <header className="flex justify-center px-5">
-                <div className="container flex justify-between items-center py-5 border-solid border-b border-gray-200">
+                <div
+                    className="container flex justify-between items-center py-5 border-solid border-b border-gray-200 md:min-w">
                     <LightningBoltIcon className="h-6 text-indigo-600" />
-                    <div className="flex items-center gap-1 text-gray-500">
-                        <ShoppingBagIcon className="h-6 text-gray-400" />
-                        <span>
-                        x4
-                    </span>
-                    </div>
+
+                    <CartButton />
                 </div>
             </header>
 
-            <main className="flex justify-center px-5">
+            <main className="main">
                 <section className="container">
                     <h1 className="text-2xl font-bold py-5">Products</h1>
 
@@ -58,6 +57,7 @@ const Home: NextPage = () => {
                     ACME Store
                 </div>
             </footer>
+
         </>
     )
 }

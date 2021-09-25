@@ -10,7 +10,6 @@ interface ModalHandle {
     handleClose: () => void,
 }
 
-
 const Modal: ForwardRefRenderFunction<ModalHandle, ModalProps> = ({children}, ref) => {
     const [display, setDisplay] = useState(false);
 
@@ -29,10 +28,11 @@ const Modal: ForwardRefRenderFunction<ModalHandle, ModalProps> = ({children}, re
         };
     });
 
-    if (!display) return null;
+    if (!display || !document?.body) return null;
 
-    return createPortal(<div>
-        <div>
+    return createPortal(<div
+        className="fixed flex justify-center top-0 bottom-0 left-0 right-0 p-4 md:p-16 z-50 backdrop-filter backdrop-blur-lg overflow-scroll">
+        <div role="dialog" aria-modal={true}>
             {children}
         </div>
     </div>, document.body);

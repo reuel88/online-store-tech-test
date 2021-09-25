@@ -1,43 +1,19 @@
 import { FunctionComponent } from "react";
-import { StarIcon as SoldStarIcon } from '@heroicons/react/solid'
+import { ProductInterface, formatAsCurrency, formatAsRating } from "../utils/format";
+import { useCheckout } from "../contexts/CheckoutContext";
 
-interface Rating {
-    rate: number,
-    count: number
+interface ProductsProps {
+    products: ProductInterface[],
+    loading: boolean,
 }
 
-export interface ProductInterface {
-    image: string,
-    title: string,
-    price: number | string,
-    rating: null | Rating
-}
-
-type formatAsCurrencyFn = (init: number | string) => string;
-type formatAsRatingFn = (rating: null | Rating) => any;
-
-
-const formatAsCurrency: formatAsCurrencyFn = (int) => {
-    // NOT typeof number
-    if (typeof int !== "number") return int;
-
-    return new Intl.NumberFormat('en-AU', {style: 'currency', currency: 'AUD'}).format(int);
-};
-
-const formatAsRating: formatAsRatingFn = (rating) => {
-    if (!rating) return null;
-
-    const ratingRounded = Math.round(rating.rate ?? 0);
-    const ratingArray = new Array(5).fill("");
-
-    return <div className="flex">
-        {ratingArray.map((v, i) => <SoldStarIcon key={i}
-                                                 className={`h-6 ${(i < ratingRounded) ? `text-yellow-500` : `text-gray-300`}`} />)}
-        <span className="text-gray-500">({rating.count ?? 0})</span>
-    </div>
-}
-
-const Products: FunctionComponent<{ products: ProductInterface[], loading: boolean }> = ({products, loading}) => {
+const Products: FunctionComponent<ProductsProps> = (
+    {
+        products,
+        loading
+    }
+) => {
+    const {addToCart} = useCheckout();
 
     if (loading) {
         const skeletons = new Array(6).fill("")
@@ -53,11 +29,11 @@ const Products: FunctionComponent<{ products: ProductInterface[], loading: boole
 
     return (
         <div className="products__grid">
-            {products.map(product => {
+            {products.map((product, i) => {
                 return (
-                    <article className="product">
+                    <article className="product" key={i}>
                         <div
-                            className="flex justify-center items-center p-5 border border-gray-200 rounded-xl col-span-2">
+                            className="flex justify-center items-center p-5 border border-gray-200 rounded-xl col-span-2 overflow-hidden">
                             <img src={product.image} alt={product.title} className="h-80" />
                         </div>
                         <h2 className="title text-gray-500 font-medium col-span-2">{product.title}</h2>
@@ -65,7 +41,9 @@ const Products: FunctionComponent<{ products: ProductInterface[], loading: boole
                         <div className="text-right">{formatAsRating(product.rating)}</div>
                         <button
                             type="button"
-                            className="btn">
+                            className="btn col-span-2"
+                            onClick={() => addToCart(product)}
+                        >
                             Add to cart
                         </button>
                     </article>
