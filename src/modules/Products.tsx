@@ -1,6 +1,6 @@
-import { FunctionComponent } from "react";
-import { ProductInterface, formatAsCurrency, formatAsRating } from "../utils/format";
-import { useCheckout } from "../contexts/CheckoutContext";
+import { FunctionComponent} from "react";
+import { ProductInterface} from "../utils/format";
+import Product from "./Product";
 
 interface ProductsProps {
     products: ProductInterface[],
@@ -13,7 +13,6 @@ const Products: FunctionComponent<ProductsProps> = (
         loading
     }
 ) => {
-    const {addToCart} = useCheckout();
 
     if (loading) {
         const skeletons = new Array(6).fill("")
@@ -29,26 +28,9 @@ const Products: FunctionComponent<ProductsProps> = (
 
     return (
         <div className="products__grid">
-            {products.map((product, i) => {
-                return (
-                    <article className="product" key={i}>
-                        <div
-                            className="flex justify-center items-center p-5 border border-gray-200 rounded-xl col-span-2 overflow-hidden">
-                            <img src={product.image} alt={product.title} className="h-80" />
-                        </div>
-                        <h2 className="title text-gray-500 font-medium col-span-2">{product.title}</h2>
-                        <p className="font-medium text-lg">{formatAsCurrency(product.price)}</p>
-                        <div className="text-right">{formatAsRating(product.rating)}</div>
-                        <button
-                            type="button"
-                            className="btn col-span-2"
-                            onClick={() => addToCart(product)}
-                        >
-                            Add to cart
-                        </button>
-                    </article>
-                );
-            })}
+            {products.map(
+                (product, i) => (<Product key={i} product={product}/>)
+            )}
         </div>
     );
 }

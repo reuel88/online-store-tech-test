@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 .btn{
-    @apply w-full flex items-center justify-center px-8 py-3
-    border border-transparent text-base font-medium rounded-xl
-    text-white bg-indigo-600 hover:bg-indigo-700
+    @apply w-full flex items-center justify-center
+    px-8 py-3
+    text-base font-medium
+    border border-transparent rounded-xl
+    text-white bg-indigo-600
+    hover:bg-indigo-700
     focus:outline-indigo
+    disabled:opacity-50
     ;
 }
 
