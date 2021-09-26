@@ -63,7 +63,7 @@ const CartButton:FunctionComponent = () => {
 
                 <footer className="text-center pt-4 flex flex-col gap-4">
                     <strong className="text-lg font-medium">Order Total: {formatAsCurrency(total)} </strong>
-                    <button className="btn">
+                    <button className="btn" onClick={() => console.log('hello')}>
                         Checkout
                     </button>
                 </footer>
